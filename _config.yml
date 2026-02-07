@@ -9,14 +9,14 @@ theme: jekyll-theme-chirpy
 lang: ko
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone:
+timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
 title: Jongwook Eun # the main title
 
-tagline: 은밀한 데이터다이어리 # it will display as the subtitle
+tagline: 회계사의 데이터 다이어리 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Jongwook's Data Diary
