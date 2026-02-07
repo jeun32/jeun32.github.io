@@ -13,7 +13,7 @@ tags : []
   
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/military_1.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/military_1.jpg"
       alt="통역병 시절"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -24,7 +24,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/military_2.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/military_2.jpg"
       alt="전역하며 유엔군과 한컷"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -47,7 +47,7 @@ tags : []
   
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/mvl_3.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/mvl_3.jpg"
       alt="생애 첫 명함"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -58,7 +58,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/mvl_4.png"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/mvl_4.png"
       alt="큰오피스로 이사전"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -69,7 +69,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/mvl_1.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/mvl_1.jpg"
       alt="베트남 출장 당시"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -92,7 +92,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/univ_1.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/univ_1.jpg"
       alt="10년차 학교 동기들"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -103,7 +103,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/pwc_1.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/pwc_1.jpg"
       alt="회사 동기들과 송년회"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -124,7 +124,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/golf_1.png"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/golf_1.png"
       alt="3개월차 골린이"
       style="width:100%; max-width:320px; display:block;"
     >
@@ -135,7 +135,7 @@ tags : []
 
   <div style="text-align: center;">
     <img 
-      src="/assets/img/260207 데이터분석 대학원을 하는 이유/code_1.jpg"
+      src="/assets/img/posts/260207 데이터분석 대학원을 하는 이유/code_1.jpg"
       alt="survival model 실습일부"
       style="width:100%; max-width:320px; display:block;"
     >
