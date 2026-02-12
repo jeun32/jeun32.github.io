@@ -75,7 +75,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: google
+  provider: false
 
 # Prefer color scheme setting.
 #
