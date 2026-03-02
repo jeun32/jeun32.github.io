@@ -46,6 +46,7 @@ head(mydata)
   </div>
 </div>
 
+
 ---
 
 ## 3. 선형회귀 실행
