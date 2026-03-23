@@ -1,5 +1,5 @@
 ---
-title : Classification_SVM&KNN (분류_SVM&KNN)
+title : Classification(SVM&KNN)
 date : 2026-02-22 01:05:00 +0900
 categories : [Graduate School, (FA25) Introduction to Analytics Modeling]
 tags : [ISYE6501, R Classification, R SVM, R KNN]
