@@ -1,7 +1,7 @@
 ---
 title: "산업분석 데일리 요약 (260508)"
 date: 2026-05-08 00:00:00 +0900
-categories: Industry Overview
+categories: Analysis Industry
 tags: [네이버증권, 산업분석, 리포트요약]
 permalink: /posts/industry-report-260508
 ---
