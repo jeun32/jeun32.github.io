@@ -6,8 +6,7 @@ tags : [ISYE6644, Monte Carlo, Option Pricing]
 math : true
 ---
 
-[📎보고서링크](/assets/files/graduate/ISYE6644/OptionLib_Final_Report.pdf)
-
+[📎보고서링크](/assets/files/graduate/ISYE6644/OptionLib_Final_Report.pdf) <br>
 [📎코드링크](https://github.com/jeun32/simulation/tree/main/notebooks)
 
 올해 여름 ISYE6644(Simulation) 팀 프로젝트로.. 현업에 바쁜 와중에도 승준이, 태호와 함께 만든 **OptionLib**를 정리해보겠습니다. (다들 고맙습니다)
