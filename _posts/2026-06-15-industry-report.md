@@ -13,12 +13,12 @@ tags: [한경컨센서스, 산업분석, 리포트요약]
 
 | 분류 | 리포트 제목 | 증권사 | PDF | 날짜 |
 | :--- | :--- | :--- | :--- | :--- |
-| 반도체 | 애플 너마저: 메모리 병목 앞에 선 온디바이스 AI | 유진투자증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650068) | 2026-06-15 |
-| 로봇 | 이슈/테마: 로봇 | 유안타증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650034) | 2026-06-15 |
-| 철강/비철금속 | New Normal 자원패권전쟁의 시대 | iM증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650058) | 2026-06-15 |
-| 이차전지 | 테슬라의 성장 전환이 반가운 K배터리 | 유진투자증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650066) | 2026-06-15 |
-| 금융/은행 | 4~5월 여수신동향 : 2Q 대출증가율 확대 예상 | LS증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650064) | 2026-06-15 |
-| 유통/통신 | Retail Weekly / 통신 서비스 Weekly | 메리츠증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650042) | 2026-06-15 |
+| 반도체 | 애플 너마저: 메모리 병목 앞에 선 온디바이스 AI | 유진투자증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650068) | 2026-06-15 |
+| 로봇 | 이슈/테마: 로봇 | 유안타증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650034) | 2026-06-15 |
+| 철강/비철금속 | New Normal 자원패권전쟁의 시대 | iM증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650058) | 2026-06-15 |
+| 이차전지 | 테슬라의 성장 전환이 반가운 K배터리 | 유진투자증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650066) | 2026-06-15 |
+| 금융/은행 | 4~5월 여수신동향 : 2Q 대출증가율 확대 예상 | LS증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650064) | 2026-06-15 |
+| 유통/통신 | Retail Weekly / 통신 서비스 Weekly | 메리츠증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650042) | 2026-06-15 |
 
 ## 2. 산업별 통합 분석
 

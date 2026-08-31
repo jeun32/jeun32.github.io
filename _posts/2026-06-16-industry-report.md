@@ -13,8 +13,8 @@ tags: [한경컨센서스, 산업분석, 리포트요약]
 
 | 분류 | 리포트 제목 | 증권사 | PDF | 날짜 |
 | :--- | :--- | :--- | :--- | :--- |
-| 에너지 | 이제는 전쟁 이후를 볼 시점 | 유진투자증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650074) | 2026-06-16 |
-| 로봇/방산/조선 | 안녕하세요 데일리에요 | 유진투자증권 | [원문보기](http://consensus.hankyung.com/analysis/downpdf?report_idx=650073) | 2026-06-16 |
+| 에너지 | 이제는 전쟁 이후를 볼 시점 | 유진투자증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650074) | 2026-06-16 |
+| 로봇/방산/조선 | 안녕하세요 데일리에요 | 유진투자증권 | [원문보기](https://consensus.hankyung.com/analysis/downpdf?report_idx=650073) | 2026-06-16 |
 
 ## 2. 산업별 통합 분석
 
