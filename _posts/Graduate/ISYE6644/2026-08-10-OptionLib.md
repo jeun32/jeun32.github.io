@@ -1,5 +1,5 @@
 ---
-title : OptionLib (python monte-carlo option pricing library)
+title : "OptionLib: A Python Library for Monte Carlo Option Pricing"
 date : 2026-08-10 20:00:00 +0900
 categories : [Graduate School, (SU26) Simulation]
 tags : [ISYE6644, Monte Carlo, Option Pricing]
@@ -9,8 +9,8 @@ math : true
 [📎보고서링크](/assets/files/OptionLib_Final_Report.pdf) <br>
 [📎코드링크](https://github.com/jeun32/simulation/tree/main/notebooks)
 
-올해 여름 ISYE6644(Simulation) 팀 프로젝트로.. 현업에 바쁜 와중에도 승준이, 태호와 함께 만든 **OptionLib**를 정리해보겠습니다. (다들 고맙습니다)
-"옵션 가격을 몬테카를로 시뮬레이션으로 어떻게, 그리고 얼마나 정확하게 계산할 수 있는가"를 다룬 파이썬 라이브러리인데, 쉽게 비유를 섞어 풀어보겠습니다.
+올해 여름 ISYE6644(Simulation) 팀 프로젝트로.. 현업에 바쁜 와중에도 승준이, 태호와 함께 개발한 **OptionLib**를 소개 및 정리해보겠습니다. (다들 고맙습니다) <br>
+"옵션 가격을 몬테카를로 시뮬레이션으로 어떻게, 그리고 얼마나 정확하게 계산할 수 있는가"를 다룬 파이썬 라이브러리인데, 쉽게 비유를 들어 풀어보겠습니다.
 
 ## <span style="color:#FEB99C;">1. 옵션이 뭔데?</span>
 
