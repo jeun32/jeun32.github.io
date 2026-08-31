@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 산업분석 데일리 요약 | 260615
+title: "산업분석 데일리 요약 | 260615"
 date: 2026-06-15 00:00:00 +0900
 permalink: /industry-report-260615
 categories: Analysis Industry
