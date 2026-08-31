@@ -45,7 +45,7 @@ $$
 S_t = S_0 \cdot \exp\left[ \left(r - \frac{1}{2}\sigma^2\right) t + \sigma \sqrt{t}\, Z \right], \quad Z \sim N(0,1)
 $$
 
-이 식으로 컴퓨터가 가짜 주가 경로를 수만 개 만들어내고(아래 이미지가 그 예시입니다), 각 경로에서 옵션의 수익(payoff)을 계산해 할인한 뒤 평균을 냅니다.
+이 식으로 컴퓨터가 가상 주가 경로를 수만 개 만들어내고(아래 이미지가 그 예시입니다), 각 경로에서 옵션의 수익(payoff)을 계산해 할인한 뒤 평균을 냅니다.
 
 $$
 V = \frac{1}{n}\sum_i e^{-rT}\cdot \text{payoff}_i, \qquad SE = \frac{s}{\sqrt{n}}, \qquad \text{95\% CI} = V \pm 1.96 \cdot SE
