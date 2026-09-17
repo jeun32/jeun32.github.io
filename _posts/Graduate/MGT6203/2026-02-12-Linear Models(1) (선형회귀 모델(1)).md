@@ -1,7 +1,7 @@
 ---
 title : Linear Models(1) (선형회귀 모델(1))
 date : 2026-02-12 19:45:00 +0900
-categories : [Graduate School, (FA25) Data Analytics in Business]
+categories : [Graduate School, (MGT6203) Data Analytics in Business_'25 Fall]
 tags : [MGT6203, R 회귀분석, lm()]
 math : true
 ---

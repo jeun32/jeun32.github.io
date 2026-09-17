@@ -1,7 +1,7 @@
 ---
 title : "OptionLib: A Python Library for Monte Carlo Option Pricing"
 date : 2026-08-10 20:00:00 +0900
-categories : [Graduate School, (SU26) Simulation]
+categories : [Graduate School, (ISYE 6644) Simulation_'26 Summer]
 tags : [ISYE6644, Monte Carlo, Option Pricing]
 math : true
 ---

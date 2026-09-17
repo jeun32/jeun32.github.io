@@ -1,7 +1,7 @@
 ---
 title : "(Week2) 웹에서 데이터 긁어오기 : 마크업 언어, 웹 스크래핑, XML, 그리고 API"
 date : 2026-09-07 21:53:02 +0900
-categories : [Graduate School, (FA26) Analysis of Unstructured Data]
+categories : [Graduate School, (MGT6033) Analysis of Unstructured Data_'26 Fall]
 tags : [MGT6033, Web Scraping, HTML, XML, JSON, API, BeautifulSoup, lxml, Requests, SEC EDGAR]
 math : true
 ---

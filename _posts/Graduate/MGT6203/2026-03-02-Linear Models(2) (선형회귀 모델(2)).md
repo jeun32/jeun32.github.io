@@ -1,7 +1,7 @@
 ---
 title : Linear Models(2)-Predictive Modeling & Interaction (선형회귀 모델(2))
 date : 2026-03-02 16:40:00 +0900
-categories : [Graduate School, (FA25) Data Analytics in Business]
+categories : [Graduate School, (MGT6203) Data Analytics in Business_'25 Fall]
 tags : [MGT6203, R 회귀분석, 다항회귀]
 math : true
 ---

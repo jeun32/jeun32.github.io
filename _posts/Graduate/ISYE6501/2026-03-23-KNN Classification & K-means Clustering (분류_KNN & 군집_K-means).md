@@ -1,7 +1,7 @@
 ---
 title : KNN Classification & K-means Clustering
 date : 2026-03-23 22:02:00 +0900
-categories : [Graduate School, (FA25) Introduction to Analytics Modeling]
+categories : [Graduate School, (ISYE6501) Introduction to Analytics Modeling_'25 Fall]
 tags : [ISYE6501, R Classification, R SVM, R KNN]
 math : true
 ---
