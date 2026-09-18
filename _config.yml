@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: Jongwook Eun # the main title
 
-tagline: 회계사의 데이터 다이어리 # it will display as the subtitle
+tagline: "KICPA | Graduate Student in Analytics at Georgia Tech" # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Jongwook's Data Diary
+  Jongwook's Blog
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/profile/profile2.jpg
+avatar: /assets/img/profile/profile3.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
