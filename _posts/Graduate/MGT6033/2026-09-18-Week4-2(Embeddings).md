@@ -2,7 +2,7 @@
 title : "(Week4-2) NLP : 워드 임베딩부터 Word2Vec, BERT까지"
 date : 2026-09-18 15:00:11 +0900
 categories : [Graduate School, (MGT6033) Analysis of Unstructured Data_'26 Fall]
-tags : [MGT6033, NLP, Word Embeddings, Word2Vec, gensim, BERT, Transformer, LSTM, Dimension Reduction]
+tags : [MGT6033, NLP, Word Embeddings, Word2Vec, gensim, BERT, Transformer, LSTM, ELMo, Dimension Reduction]
 math : true
 ---
 
@@ -27,6 +27,11 @@ math : true
 $k=2$로 `king, president, horse, chicken, army, farm, castle, house`를 그려보면,
 king·president는 위쪽(리더십), horse·chicken은 오른쪽 아래(생물), farm·castle·house는 왼쪽(장소)에 모입니다.
 **임베딩은 이런 배치를 텍스트 사용 패턴으로부터 자동으로 학습**합니다.
+
+여기서 중요한 포인트 하나: 이 벡터들은 **Dense Vector**입니다. One-hot encoding처럼 대부분이 0인 **Sparse Vector**와 달리, 워드 임베딩은 k개 차원 대부분이 0이 아닌 의미 있는 실수로 채워져 있습니다.
+
+$$ \text{one-hot}(\text{cat}) = [0, 0, 1, 0, ..., 0] \quad (\text{sparse, 어휘 크기만큼의 차원}) $$
+$$ \text{word2vec}(\text{cat}) = [0.23, -0.45, 0.67, ..., 0.12] \quad (\text{dense, k차원}) $$
 
 ## <span style="color:#FEB99C;">6. Word2Vec: 단순하지만 강력한 임베딩</span>
 
@@ -53,6 +58,23 @@ $$ \text{king} - \text{man} + \text{woman} \approx \text{queen} $$
 강의의 유추(analogy) 비교에서 `creditor:lend :: debtor:borrow` 같은 금융 뉘앙스는
 **fintext(금융 특화) 모델만** 제대로 잡아냈습니다. 단, 커스텀 모델은 **충분히 큰 코퍼스와 훈련 시간**이 필요합니다.
 
+### <span style="color:#FEB99C;">6-1. Word2Vec은 "Static Embedding"이다</span>
+
+Word2Vec이 학습을 마치면, **단어 하나당 벡터 하나**가 고정적으로 부여됩니다. 문맥이 어떻게 바뀌든 같은 단어는 항상 같은 벡터를 반환하는데, 이런 방식을 **Static Embedding**이라고 부릅니다 (Word2Vec, GloVe가 대표적).
+
+두 벡터가 얼마나 유사한지는 **코사인 유사도(cosine similarity)**로 판단합니다. 벡터의 "방향"이 비슷할수록(각도가 작을수록) 의미적으로 유사하다고 보는 방식입니다.
+
+$$ \text{similarity}(\vec{a}, \vec{b}) = \cos(\theta) = \frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|} $$
+
+**Static Embedding의 명확한 한계들**
+
+- **문맥 무시**: "I love Apple(회사)"과 "I ate an apple(과일)"에서 `apple`이 정확히 같은 벡터를 가짐 → 문맥에 따른 의미 변화를 전혀 반영하지 못함
+- **동음이의어 구분 불가**: 위와 같은 이유로, `bank`(은행/강둑) 같은 다의어를 구분할 수 없음
+- **OOV(Out-of-Vocabulary) 문제**: 학습 데이터에 없던 단어는 벡터 자체가 존재하지 않음 (신조어, 오타 등에 취약)
+- **형태학적 관계 무시**: 단어를 형태소로 쪼개지 않고 통째로 학습하기 때문에, `happy`·`unhappy`·`happiness`처럼 형태적으로 연관된 단어들 사이의 관계를 자동으로 학습하지 못함 (이를 보완한 것이 FastText의 subword 방식)
+
+> 💡 Static Embedding의 대안으로는, 문맥을 실시간으로 반영하는 **Contextualized Embedding**(ELMo, BERT), 형태소 정보를 반영하는 **Subword Embedding**(FastText), 문장·문서 단위로 벡터를 만드는 **Sentence/Document Embedding**(Sentence-BERT, Doc2Vec) 등이 있습니다. Contextualized Embedding은 9장에서 자세히 다룹니다.
+
 ## <span style="color:#FEB99C;">7. 임베딩 활용: 사실은 차원 축소다</span>
 
 의외의 관점: 워드 임베딩은 **차원 축소(dimension reduction)** 기법입니다.
@@ -64,11 +86,15 @@ DTM의 컬럼이 1,500~5,000개라도, 임베딩을 곱하면 **k(예: 300)차�
 $$ \underbrace{DTM}_{d \times n} \times \underbrace{E}_{n \times k} = \underbrace{문서임베딩}_{d \times k} $$
 
 즉 **각 단어의 등장 횟수 × 그 단어의 임베딩**을 문서 단위로 합산하는 것입니다.
+예를 들어 2,000개 문서 × 500개 단어짜리 DTM과 500개 단어 × 300차원짜리 임베딩 행렬을 곱하면, 결과는 **2,000 × 300** 크기의 문서 임베딩 행렬이 됩니다. 각 문서가 더 이상 500개 단어의 빈도 정보(sparse)가 아니라, **300차원의 "의미 벡터"(dense)**로 압축되어 표현되는 것입니다.
 
 **어디에 쓰나?**
 - **동의어 처리**: 같은 의견을 다른 단어로 쓴 리뷰가 서로 가깝게 표현됨
-- **감성 측정 보강**: 사전에 없는 단어도 유사어를 통해 커버
-- **문서 분류·토픽 식별** 성능 향상 (확장판으로 Doc2Vec, Top2Vec)
+- **감성 측정 보강(Sentiment Analysis)**: `good`, `great`, `excellent` 같은 긍정 단어들이 벡터 공간에서 서로 가깝게 위치 → 사전에 없는 단어도 유사어를 통해 감정 유사도를 자연스럽게 capture
+- **문서 분류(Document Classification)**: 문서 전체의 단어 벡터를 종합해 주제·카테고리를 파악, 토픽 식별 성능 향상 (확장판으로 Doc2Vec, Top2Vec)
+- **개체명 인식(NER)**: 결국 각 단어가 사람·장소·조직 등 어떤 개체인지 분류하는 문제인데, 워드 임베딩이 단어의 의미 정보를 제공해 분류 성능을 높임
+
+**시각화도 가능합니다.** k가 100, 300처럼 커서 사람이 직접 볼 수는 없지만, **PCA·t-SNE** 같은 차원 축소 기법으로 2D·3D로 압축해서 시각화할 수 있습니다. 이렇게 그려보면 의미적으로 비슷한 단어들이 그래프 상에서 실제로 뭉쳐있는 걸 눈으로 확인할 수 있습니다.
 
 **한계**는 명확합니다: **문맥(context)을 놓칩니다.** 부정어(`not`), 수식어(`very`), 비꼼(sarcasm),
 그리고 결정적으로 **다의어**(state capital / capital punishment / capital expenditure)를 구분하지 못합니다.
@@ -106,21 +132,30 @@ gensim은 입력 구조가 독특한데, **리스트의 리스트**(바깥=문�
 ## <span style="color:#FEB99C;">9. 문맥 기반 임베딩: BERT까지</span>
 
 워드 임베딩의 한계(문맥 부재)를 극복하는 게 **문맥 기반 임베딩(Contextualized Embeddings)** 입니다.
-"그거 참 잘됐네"가 진심인지 비꼼인지는 **주변 단어**와 **순서**로 결정되죠.
+"그거 참 잘됐네"가 진심인지 비꼼인지는 **주변 단어**와 **순서**로 결정됩니다.
+
+Contextualized Embedding의 핵심은, **같은 단어라도 문맥에 따라 다른 벡터가 나온다**는 점입니다.
+
+$$ \text{vector}(\text{bank in "river bank"}) \neq \text{vector}(\text{bank in "bank loan"}) $$
+
+이렇게 문맥을 반영하려면, 문장이 들어올 때마다 **거대한 딥러닝 모델을 처음부터 다시 실행**해야 합니다. Static Embedding은 한 번 학습해두면 사전처럼 조회만 하면 되지만(빠름), Contextualized Embedding은 새로운 문장마다 전체 모델 연산을 다시 수행해야 하기 때문에 **계산 비용이 훨씬 큽니다.**
+
 문맥을 넣는 두 가지 큰 접근이 있습니다.
 
 | 접근 | 원리 | 대표 모델 |
 |---|---|---|
-| **순환(Recurrence)** | 이전 출력을 다음 입력으로 넣어 순서·근접성 포착 | **LSTM** |
-| **어텐션(Attention)** | 시퀀스를 **한꺼번에** 처리하며 주변에 "주목" | **Transformer** |
+| **순환(Recurrence)** | 이전 출력을 다음 입력으로 넣어 순서·근접성 포착 | **LSTM**, **ELMo** |
+| **어텐션(Attention)** | 시퀀스를 **한꺼번에** 처리하며 주변에 "주목" | **Transformer**, **BERT** |
 
-### LSTM — "앞 내용을 기억하며 읽기"
+### LSTM(ELMo) — "앞 내용을 기억하며 읽기"
 
 **LSTM**은 문장을 왼쪽에서 오른쪽으로 **한 단어씩** 읽습니다.
 각 단어를 이해할 때 ①지금 보는 단어 ②바로 앞에서 이해한 내용 ③지금까지 대화의 전반적 분위기(기억)를 함께 씁니다.
-사람이 글을 읽을 때 앞 문장을 기억하며 다음 문장을 이해하는 것과 똑같죠.
+사람이 글을 읽을 때 앞 문장을 기억하며 다음 문장을 이해하는 것과 똑같은 구조입니다.
 
-> 다만 **순서대로 한 단어씩** 처리해야 해서 **속도가 느립니다.** 오래 최강자였지만 이 점이 발목을 잡았어요.
+> 다만 **순서대로 한 단어씩** 처리해야 해서 **속도가 느립니다.** 오래 최강자였지만 이 점이 발목을 잡았습니다.
+
+이 LSTM을 기반으로 Contextualized Embedding을 처음 성공적으로 구현한 모델이 **ELMo**(Embeddings from Language Models, 2018)입니다. ELMo는 문장을 정방향(→)과 역방향(←) 양쪽에서 각각 LSTM으로 읽어, 두 결과를 합쳐서 문맥을 반영한 벡터를 만듭니다. BERT가 등장하기 전, Static → Contextualized로 넘어가는 다리 역할을 한 중요한 모델입니다.
 
 ### Transformer & BERT — "한눈에 보고 중요한 데 집중하기"
 
@@ -149,8 +184,6 @@ gensim은 입력 구조가 독특한데, **리스트의 리스트**(바깥=문�
 
 - **정규 표현식**은 "언어 속의 언어". 문자/클래스/연산자 + 그룹으로 검색·추출·치환. **greedy vs. lazy**, `\b`, look-around, 백레퍼런스가 핵심 무기
 - 실무 철학: **완벽보다 80~95%**, 단순하게 짜고 필요할 때 조이기, [regex101](https://regex101.com)에서 테스트
-- **워드 임베딩**은 단어를 k차원 벡터로 → 사실은 **차원 축소**. 유사어·감성·분류에 유용하나 **문맥 부재**가 한계
-- **Word2Vec**: 단일층 신경망, **CBOW vs. Skip-gram**, gensim으로 사용/훈련. **도메인 커스텀 모델**이 뉘앙스를 잘 잡음
-- **문맥 임베딩**: 순환(**LSTM**) 또는 어텐션(**Transformer/BERT**)으로 문맥 포착, **전이학습 + 미세조정**이 실전의 열쇠
-
----
+- **워드 임베딩**은 단어를 k차원 dense 벡터로 → 사실은 **차원 축소**. 유사어·감성·분류·NER에 유용하나 **문맥 부재**가 한계
+- **Word2Vec**은 대표적인 **Static Embedding**: 단일층 신경망, **CBOW vs. Skip-gram**, 코사인 유사도로 유사성 판단. gensim으로 사용/훈련하며, **도메인 커스텀 모델**이 뉘앙스를 잘 잡음
+- **문맥 임베딩**: 순환(**LSTM, ELMo**) 또는 어텐션(**Transformer, BERT**)으로 문맥 포착, **전이학습 + 미세조정**이 실전의 열쇠
