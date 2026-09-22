@@ -15,12 +15,12 @@
 blockquote {
   border-left: 4px solid #4A90D9 !important;
   background-color: rgba(74, 144, 217, 0.10);
-  color: #428ae3 !important;
+  color: #4999fb !important;
   padding: 0.6em 1em;
   border-radius: 4px;
 }
 blockquote strong,
-blockquote b { color: #cfe3ff !important; }
+blockquote b { color: #4999fb !important; }
 
 /* 다크모드: 밝은 파랑 글자 */
 html[data-mode="dark"] blockquote {
