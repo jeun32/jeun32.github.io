@@ -1,32 +1,32 @@
-  ---
-  ---
+---
+---
 
-  /* prettier-ignore */
-  @use 'main
-  {%- if jekyll.environment == 'production' -%}
-    .bundle
-  {%- endif -%}
-  ';
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
-  /* append your custom style below */
+/* append your custom style below */
 
-  /* ===== blockquote(인용구) 파란색 강조 ===== */
-  /* 라이트모드: 진한 파랑 글자 */
-  blockquote {
-    border-left: 4px solid #4A90D9 !important;
-    background-color: rgba(74, 144, 217, 0.10);
-    color: #3590ff !important;
-    padding: 0.6em 1em;
-    border-radius: 4px;
-  }
-  blockquote strong,
-  blockquote b { color: #3590ff !important; }
+/* ===== blockquote(인용구) 파란색 강조 ===== */
+/* 라이트모드: 진한 파랑 글자 */
+blockquote {
+  border-left: 4px solid #4A90D9 !important;
+  background-color: rgba(74, 144, 217, 0.10);
+  color: #bddbff !important;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+}
+blockquote strong,
+blockquote b { color: #cfe3ff !important; }
 
-  /* 다크모드: 밝은 파랑 글자 */
-  html[data-mode="dark"] blockquote {
-    color: #cfe3ff !important;
-  }
-  html[data-mode="dark"] blockquote strong,
-  html[data-mode="dark"] blockquote b {
-    color: #cfe3ff !important;
-  }
+/* 다크모드: 밝은 파랑 글자 */
+html[data-mode="dark"] blockquote {
+  color: #cfe3ff !important;
+}
+html[data-mode="dark"] blockquote strong,
+html[data-mode="dark"] blockquote b {
+  color: #cfe3ff !important;
+}
