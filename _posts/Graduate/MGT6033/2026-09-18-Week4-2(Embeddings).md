@@ -142,10 +142,10 @@ $$ \text{vector}(\text{bank in "river bank"}) \neq \text{vector}(\text{bank in "
 
 문맥을 넣는 두 가지 큰 접근이 있습니다.
 
-| 접근 | 원리 | 대표 모델 |
-|---|---|---|
-| **순환(Recurrence)** | 이전 출력을 다음 입력으로 넣어 순서·근접성 포착 | **LSTM**, **ELMo** |
-| **어텐션(Attention)** | 시퀀스를 **한꺼번에** 처리하며 주변에 "주목" | **Transformer**, **BERT** |
+| 접근 | 원리 | 아키텍처 | 모델 |
+|---|---|---|---|
+| **순환(Recurrence)** | 이전 출력을 다음 입력으로 넣어 순서·근접성 포착 | **LSTM** | **ELMo** |
+| **어텐션(Attention)** | 시퀀스를 **한꺼번에** 처리하며 주변에 "주목" | **Transformer** | **BERT** |
 
 ### LSTM(ELMo) — "앞 내용을 기억하며 읽기"
 
@@ -186,4 +186,4 @@ $$ \text{vector}(\text{bank in "river bank"}) \neq \text{vector}(\text{bank in "
 - 실무 철학: **완벽보다 80~95%**, 단순하게 짜고 필요할 때 조이기, [regex101](https://regex101.com)에서 테스트
 - **워드 임베딩**은 단어를 k차원 dense 벡터로 → 사실은 **차원 축소**. 유사어·감성·분류·NER에 유용하나 **문맥 부재**가 한계
 - **Word2Vec**은 대표적인 **Static Embedding**: 단일층 신경망, **CBOW vs. Skip-gram**, 코사인 유사도로 유사성 판단. gensim으로 사용/훈련하며, **도메인 커스텀 모델**이 뉘앙스를 잘 잡음
-- **문맥 임베딩**: 순환(**LSTM, ELMo**) 또는 어텐션(**Transformer, BERT**)으로 문맥 포착, **전이학습 + 미세조정**이 실전의 열쇠
+- **문맥 임베딩**: 순환 아키텍처(LSTM)를 활용한 **ELMo**, 어텐션 아키텍처(Transformer)를 활용한 **BERT**로 문맥 포착, **전이학습 + 미세조정**이 실전의 열쇠
