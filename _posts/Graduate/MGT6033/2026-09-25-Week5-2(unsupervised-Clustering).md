@@ -258,6 +258,3 @@ hdb = HDBSCAN().fit_predict(reduced)      # UMAP 후: 30% 노이즈로 개선
 - **차원의 저주** = 고차원에선 거리가 다 비슷해져 밀도가 사라짐 → HDBSCAN이 무너짐 → **차원축소로 밀도 부활**
 - **PCA(선형·전역) vs UMAP(비선형·지역)** — 뒤에 오는 클러스터링이 원하는 정보와 **궁합**을 맞춰야 함 (K-means↔PCA, HDBSCAN↔UMAP)
 - Demo B에서 TF-IDF 기반 K-means와 HDBSCAN을 비교하고, 차원 축소로 노이즈를 80% → 30%로 개선
-
-이것으로 Week 5 **비지도 학습 & NLP** 정리를 마칩니다.
-([1편 — 토픽 모델링 보러가기](#))
