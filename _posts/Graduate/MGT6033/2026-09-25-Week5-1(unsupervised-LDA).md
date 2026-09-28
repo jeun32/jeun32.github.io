@@ -318,7 +318,7 @@ doc_topics = [
 
 > 재밌게도 **소프트 클러스터링(GMM)** 까지 가면 LDA와 점점 비슷해집니다.
 > 둘 다 "이 문서는 A 60%, B 40%"라고 말하니까요.
-> (K-means/HDBSCAN은 [2편](#)에서 자세히 다룹니다.)
+> (K-means/HDBSCAN은 2편에서 자세히 다룹니다.)
 
 ## <span style="color:#FEB99C;">5. 실습 데모: 토픽 모델링 (Demo A, sklearn)</span>
 
