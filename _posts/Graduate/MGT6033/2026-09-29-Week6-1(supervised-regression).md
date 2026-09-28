@@ -1,6 +1,6 @@
 ---
 title : "(Week6-1) 지도 학습과 텍스트 회귀 : 과적합을 줄이며 숫자 예측하기 (Lasso & SVR)"
-date : 2026-09-29 12:04:00 +0900
+date : 2026-09-29 00:57:00 +0900
 categories : [Graduate School, (MGT6033) Analysis of Unstructured Data_'26 Fall]
 tags : [MGT6033, NLP, Supervised Learning, Regression, Lasso, SVR, Overfitting, Cross-Validation]
 math : true

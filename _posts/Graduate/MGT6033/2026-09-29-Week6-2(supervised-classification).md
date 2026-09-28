@@ -1,6 +1,6 @@
 ---
 title : "(Week6-2) 지도 학습과 텍스트 분류 : 편향을 잡으며 강세·약세 분류하기 (RF & LightGBM)"
-date : 2026-09-29 12:04:10 +0900
+date : 2026-09-29 00:57:10 +0900
 categories : [Graduate School, (MGT6033) Analysis of Unstructured Data_'26 Fall]
 tags : [MGT6033, NLP, Supervised Learning, Classification, Decision Tree, Naive Bayes, Random Forest, LightGBM, Ensemble]
 math : true
